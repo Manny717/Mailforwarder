@@ -12,10 +12,10 @@ def validate(params):
     if params["event"]["type"] != "message":
         print("Event type is ", params["event"]["type"], "but not `message`")
 
-    app_id = params["api_app_id"] == os.environ["APP_ID"]
-    token = params["token"] == os.environ["VERIFICATION_TOKEN"]
-    team = params["team_id"] == os.environ["TEAM_ID"]
-    channel = params["event"]["channel"] == os.environ["USLACKBOT_CHANNEL"]
+    app_id = params["api_app_id"] == os.environ["A049E184MNV"]
+    token = params["token"] == os.environ["rlMOPgRaChgw8UOEoyKsY3A9"]
+    team = params["team_id"] == os.environ["T044FFM7YUU"]
+    channel = params["event"]["channel"] == os.environ["D0446E17URL"]
     user = params["event"].get("user", "") == "USLACKBOT"
     subtype = params["event"]["subtype"] == "file_share"
 
@@ -116,7 +116,7 @@ def main():
                     "short": False
                 })
 
-            INCOMING_WEBHOOK_URL = os.environ["INCOMING_WEBHOOK_URL"]
+            INCOMING_WEBHOOK_URL = os.environ["https://hooks.slack.com/services/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"]
 
             headers = {
                 "Content-type": "application/json"
